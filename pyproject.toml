@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qfianheido-calibrate"
+version = "0.1.0"
+description = "按段落统计模型的常识校准相关的长度分布，标出过长、过短与重复表达的部分"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "qfianheido" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://qfianheido.github.io"
+Repository = "https://github.com/qfianheido/calibrate"
+Issues = "https://github.com/qfianheido/calibrate/issues"
+
+[project.scripts]
+calibrate = "calibrate:main"
+
+[tool.setuptools]
+py-modules = ["calibrate"]
